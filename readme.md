@@ -291,20 +291,72 @@ Based on the provided mockups:
 
 # 📦 12. Folder Structure
 
-```
-root/
-│── frontend/
-│   ├── pages/
-│   ├── components/
-│   ├── styles/
+healthcare-portal/
 │
-│── backend/
-│   ├── routes/
-│   ├── controllers/
-│   ├── models/
-│   ├── middleware/
-│   └── server.js
+├── README.md
+├── .gitignore
+├── .env.example
 │
-│── README.md
-│── .env.example
-```
+├── backend/
+│   ├── package.json
+│   ├── .env           (not committed)
+│   ├── src/
+│   │   ├── server.js
+│   │   ├── config.js
+│   │   ├── utils/
+│   │   │   └── db.js
+│   │   ├── middleware/
+│   │   │   └── auth.js
+│   │   ├── models/
+│   │   │   ├── User.js
+│   │   │   ├── Goal.js
+│   │   │   ├── ActivityLog.js
+│   │   │   ├── Reminder.js
+│   │   │   └── Tip.js (optional)
+│   │   ├── controllers/
+│   │   │   ├── authController.js
+│   │   │   ├── patientController.js
+│   │   │   ├── providerController.js
+│   │   │   └── publicController.js
+│   │   ├── routes/
+│   │   │   ├── auth.js
+│   │   │   ├── patient.js
+│   │   │   ├── provider.js
+│   │   │   └── public.js
+│   │   └── utils/
+│   │       └── computeCompliance.js (optional helper)
+│   │
+│   └── tests/ (optional)
+│
+├── frontend/
+│   ├── package.json
+│   ├── .env.local  (not committed)
+│   ├── public/
+│   ├── src/
+│   │   ├── pages/
+│   │   │   ├── index.js               
+│   │   │   ├── login.js
+│   │   │   ├── register.js
+│   │   │   ├── dashboard.js
+│   │   │   └── provider/
+│   │   │       └── index.js
+│   │   ├── components/
+│   │   │   ├── Layout.js
+│   │   │   ├── Header.js
+│   │   │   └── DashboardWidgets/
+│   │   │       ├── StepsCard.js
+│   │   │       ├── SleepCard.js
+│   │   │       ├── ActivityCard.js
+│   │   │       └── ReminderCard.js
+│   │   ├── styles/
+│   │   │   ├── globals.css
+│   │   │   └── dashboard.css
+│   │   └── utils/
+│   │       └── api.js
+│   │
+│   └── tests/ (optional)
+│
+└── .github/
+    └── workflows/
+        └── ci.yml   (optional: GitHub Actions)
+
